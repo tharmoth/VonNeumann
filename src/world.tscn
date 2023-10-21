@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://cifkk4yugal66"]
+
+[ext_resource type="Texture2D" uid="uid://7cl57cwx1ld1" path="res://res/bot.png" id="3_bn286"]
+[ext_resource type="Script" path="res://src/Bot.cs" id="4_r36ja"]
+[ext_resource type="Texture2D" uid="uid://c8pe11qlrgeba" path="res://res/factory.png" id="5_yhtjs"]
+[ext_resource type="Script" path="res://src/Factory.cs" id="6_lqouy"]
+[ext_resource type="Script" path="res://src/RTSCam.gd" id="7_dafv3"]
+[ext_resource type="Script" path="res://src/CircleSpawner.cs" id="8_kc2gf"]
+
+[node name="World" type="Node2D"]
+
+[node name="Bot" type="Sprite2D" parent="."]
+position = Vector2(8000, 0)
+texture = ExtResource("3_bn286")
+script = ExtResource("4_r36ja")
+
+[node name="Factory" type="Sprite2D" parent="." groups=["Factory"]]
+position = Vector2(8000, 0)
+texture = ExtResource("5_yhtjs")
+script = ExtResource("6_lqouy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("7_dafv3")
+
+[node name="CircleSpawner" type="Node2D" parent="."]
+script = ExtResource("8_kc2gf")
